@@ -3,11 +3,49 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <title>Insert Title Here</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap" rel="stylesheet">
+  <script src="assets/js/script.js"></script>
+  <title>Calculator</title>
 </head>
-<body>
-
-
+<body class="theme-blue">
+  <section class="section">
+    <div class="all-content">
+      <div class="header">
+        <span class="calc">calc</span>
+        <div class="change-theme">
+          <p class="theme-numbers">123</p>
+          <div class="theme-toggle-group">
+            <div class="theme-text">THEME</div>
+            <div id="toggle1" class="theme-toggle" onclick="changeTheme(event)"><button class="toggle-button"></button></div>
+            <div id="toggle2" class="theme-toggle" onclick="changeTheme(event)"><button class="toggle-button theme-two"></button></div>
+            <div id="toggle3" class="theme-toggle" onclick="changeTheme(event)"><button class="toggle-button theme-three"></button></div>
+          </div>
+        </div>
+      </div>
+      <div class="display">0</div>
+      <div class="calculator">
+        <button class="button" onclick="clickNumber(7)">7</button>
+        <button class="button" onclick="clickNumber(8)">8</button>
+        <button class="button" onclick="clickNumber(9)">9</button>
+        <button class="button margin-right-0 button-del" onclick="del()">DEL</button>
+        <button class="button" onclick="clickNumber(4)">4</button>
+        <button class="button" onclick="clickNumber(5)">5</button>
+        <button class="button" onclick="clickNumber(6)">6</button>
+        <button class="button margin-right-0" onclick="clickOperation('+')">+</button>
+        <button class="button" onclick="clickNumber(1)">1</button>
+        <button class="button" onclick="clickNumber(2)">2</button>
+        <button class="button" onclick="clickNumber(3)">3</button>
+        <button class="button margin-right-0" onclick="clickOperation('-')">-</button>
+        <button class="button" onclick="decimal()">.</button>
+        <button class="button" onclick="clickNumber(0)">0</button>
+        <button class="button" onclick="clickOperation('/')">/</button>
+        <button class="button margin-right-0" onclick="clickOperation('*')">x</button>
+        <button class="button-reset" onclick="reset()">RESET</button>
+        <button class="button-equal" onclick="clickEqual()">=</button>
+      </div>
+    </div>
+  </section>
 </body>
 </html>

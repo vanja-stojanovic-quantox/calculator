@@ -1,0 +1,584 @@
+$fontStack: 'Spartan', sans-serif;
+$backgroundColor: #3a4663;
+$navyBlue: #181f33;
+$white: #ffffff;
+$darkBlue: #242d44;
+$beige: #eae3dc;
+$beigeShadow: #b3a497;
+$colorNumber: #434a59;
+$blue: #647198;
+$blueShadow: #414e73;
+$red: #d03f2f;
+$redShadow: #93261a;
+$redActive: #f96b5b;
+$blueActive: #a2b2e1;
+$backgroundColorTheme2: #e6e6e6;
+$black: #36362c;
+$orange: #c85402;
+$orangeShadow: #873901;
+$orangeActive: #ff8a38;
+$darkBeige: #d2cdcd;
+$lightBeige: #e5e4e1;
+$button2ColorShadow: #a79e91;
+$display2Color: #eeeeee;
+$darkGreen: #378187;
+$darkGreenShadow: #1b6066;
+$darkGreenActive: #62b5bc;
+$backgroundColorTheme3: #17062a;
+$yellow: #ffe53d;
+$mintColor: #00ded0;
+$mintColorShadow: #6cf9f1;
+$mintColorActive: #93fff8;
+$darkColor: #1a2327;
+$darkPurple: #1e0936;
+$purple: #331c4d;
+$purpleShadow: #881c9e;
+$purpleActive: #6c34ac;
+$lightPurple: #56077c;
+$lightPurpleShadow: #be15f4;
+$lightPurpleActive: #8631af;
+
+body {
+    font-family: $fontStack;
+    font-style: normal;
+    margin: 0;
+
+    .section {
+        width: 375px;
+        height: 100%;
+        margin: 0 auto;
+
+        @media only screen and (min-device-width: 1440px) {
+            width: 1440px;
+        }
+
+        .all-content {
+            width: 327px;
+            margin: 0 auto;
+
+            @media only screen and (min-device-width: 1440px) {
+                width: 540px;
+            }
+
+            .header {
+                width: 100%;
+                height: 44px;
+                padding-top: 28px;
+
+                @media only screen and (min-device-width: 1440px) {
+                    padding-top: 96px;
+                }
+
+                .calc {
+                    color: $white;
+                    font-size: 32px;
+                    line-height: 36px;
+                    position: relative;
+                    top: 4px;
+
+                    @media only screen and (min-device-width: 1440px) {
+                        top: 8px;
+                    }
+                }
+
+                .change-theme {
+                    width: 144px;
+                    float: right;
+
+                    .theme-numbers {
+                        margin: 0 -5px 0 0;
+                        letter-spacing: 15px;
+                        text-align: right;
+                        font-size: 12px;
+                        line-height: 13px;
+                    }
+
+                    .theme-toggle-group {
+                        .theme-text {
+                            font-size: 12px;
+                            line-height: 13px;
+                            letter-spacing: 1px;
+                            display: inline-block;
+                            margin-top: 14px;
+                        }
+
+                        #toggle2 {
+                            display: none;
+                        }
+
+                        #toggle3 {
+                            display: none;
+                        }
+
+                        .theme-toggle {
+                            width: 71px;
+                            height: 26px;
+                            border-radius: 13px;
+                            margin-top: 5px;
+                            float: right;
+
+                            .toggle-button {
+                                width: 16px;
+                                height: 16px;
+                                border-radius: 50%;
+                                border: 0;
+                                margin: 5px;
+                                transition: 0.5s;
+
+                                &:active,
+                                &:hover {
+                                    cursor: pointer;
+                                }
+                            }
+
+                            .theme-two {
+                                transition: 0.5s;
+                                transform: translateX(20px);
+                            }
+
+                            .theme-three {
+                                transition: 0.5s;
+                                transform: translateX(45px);
+                            }
+                        }
+                    }
+                }
+            }
+
+            .display {
+                margin: 32px auto 24px auto;
+                text-align: right;
+                padding: 26px 24px 26px 0;
+                font-size: 32px;
+                line-height: 36px;
+                letter-spacing: -0.53px;
+                border-radius: 10px;
+
+                @media only screen and (min-device-width: 1440px) {
+                    padding: 38px 32px 36px 0;
+                    font-size: 48px;
+                    line-height: 54px;
+                    letter-spacing: -0.8px;
+                }
+            }
+
+            .calculator {
+                margin: 0 auto;
+                margin-bottom: 31px;
+                padding: 24px;
+                border-radius: 10px;
+                display: inline-table;
+
+                @media only screen and (min-device-width: 1440px) {
+                    margin-bottom: 96px;
+                    padding: 30px;
+                }
+
+                .button {
+                    width: 60px;
+                    height: 64px;
+                    box-shadow: inset 0px -4px 0px $beigeShadow;
+                    border-radius: 5px;
+                    font-family: $fontStack;
+                    font-size: 28px;
+                    line-height: 31px;
+                    font-weight: 700;
+                    letter-spacing: -0.47px;
+                    text-align: center;
+                    display: inline-block;
+                    padding-bottom: 4px;
+                    margin-right: 13px;
+                    margin-bottom: 13px;
+                    border: 0;
+
+                    &:active,
+                    &:hover {
+                        cursor: pointer;
+                    }
+
+                    @media only screen and (min-device-width: 1440px) {
+                        width: 101px;
+                        border-radius: 10px;
+                        font-size: 32px;
+                        line-height: 36px;
+                        letter-spacing: -0.53px;
+                        margin-right: 25px;
+                        margin-bottom: 24px;
+                    }
+                }
+
+                .margin-right-0 {
+                    margin-right: 0;
+                }
+
+                .button-del {
+                    box-shadow: inset 0px -4px 0px $blueShadow;
+                    font-size: 16px;
+                    line-height: 18px;
+                    letter-spacing: -0.27px;
+                    top: -3px;
+                    position: relative;
+
+                    &:active,
+                    &:hover {
+                        cursor: pointer;
+                    }
+
+                    @media only screen and (min-device-width: 1440px) {
+                        font-size: 20px;
+                        line-height: 22px;
+                        letter-spacing: -0.33px;
+                    }
+                }
+
+                .button-reset {
+                    width: 133px;
+                    height: 64px;
+                    box-shadow: inset 0px -4px 0px $blueShadow;
+                    border-radius: 5px;
+                    font-family: $fontStack;
+                    font-size: 16px;
+                    line-height: 18px;
+                    letter-spacing: -0.27px;
+                    text-align: center;
+                    padding-bottom: 8px;
+                    margin-right: 13px;
+                    border: 0;
+
+                    &:active,
+                    &:hover {
+                        cursor: pointer;
+                    }
+
+                    @media only screen and (min-device-width: 1440px) {
+                        width: 227px;
+                        border-radius: 10px;
+                        font-size: 20px;
+                        line-height: 22px;
+                        letter-spacing: -0.33px;
+                        padding-bottom: 5px;
+                        margin-right: 24px;
+                    }
+                }
+
+                .button-equal {
+                    width: 133px;
+                    height: 64px;
+                    box-shadow: inset 0px -4px 0px $redShadow;
+                    border-radius: 5px;
+                    font-family: $fontStack;
+                    font-size: 16px;
+                    line-height: 18px;
+                    letter-spacing: -0.27px;
+                    text-align: center;
+                    padding-bottom: 8px;
+                    display: inline-block;
+                    border: 0;
+
+                    &:active,
+                    &:hover {
+                        cursor: pointer;
+                    }
+
+                    @media only screen and (min-device-width: 1440px) {
+                        width: 227px;
+                        border-radius: 10px;
+                        font-size: 20px;
+                        line-height: 22px;
+                        letter-spacing: -0.33px;
+                        padding-bottom: 5px;
+                    }
+                }
+            }
+        }
+    }
+
+    .font-size-40 {
+        font-size: 27px;
+
+        @media only screen and (min-device-width: 1440px) {
+            font-size: 40px !important;
+        }
+    }
+
+    .font-size-30 {
+        font-size: 19px;
+
+        @media only screen and (min-device-width: 1440px) {
+            font-size: 30px !important;
+        }
+    }
+}
+
+.theme-blue {
+    background-color: $backgroundColor;
+
+    .calc {
+        color: $white;
+    }
+
+    .theme-numbers {
+        color: $white;
+    }
+
+    .theme-text {
+        color: $white;
+    }
+
+    #toggle1 {
+        display: block;
+    }
+
+    #toggle2,
+    #toggle3 {
+        display: none;
+    }
+
+    .theme-toggle {
+        background-color: $darkBlue;
+    }
+
+    .toggle-button {
+        background-color: $red;
+
+        &:active,
+        &:hover {
+            background-color: $redActive;
+        }
+    }
+
+    .display {
+        background-color: $navyBlue;
+        color: $white;
+    }
+
+    .calculator {
+        background-color: $darkBlue;
+
+        .button {
+            background-color: $beige;
+            color: $colorNumber;
+            box-shadow: inset 0px -4px 0px $beigeShadow;
+
+            &:active,
+            &:hover {
+                background: $white;
+            }
+        }
+
+        .button-del {
+            background-color: $blue;
+            color: $white;
+            box-shadow: inset 0px -4px 0px $blueShadow;
+
+            &:active,
+            &:hover {
+                background-color: $blueActive;
+            }
+        }
+
+        .button-reset {
+            background-color: $blue;
+            color: $white;
+            box-shadow: inset 0px -4px 0px $blueShadow;
+
+            &:active,
+            &:hover {
+                background-color: $blueActive;
+            }
+        }
+
+        .button-equal {
+            background-color: $red;
+            color: $white;
+            box-shadow: inset 0px -4px 0px $redShadow;
+
+            &:active,
+            &:hover {
+                background-color: $redActive;
+            }
+        }
+    }
+}
+
+.theme-light {
+    background-color: $backgroundColorTheme2;
+
+    .calc {
+        color: $black !important;
+    }
+
+    .theme-numbers {
+        color: $black;
+    }
+
+    .theme-text {
+        color: $black;
+    }
+
+    #toggle2 {
+        display: block !important;
+    }
+
+    #toggle1,
+    #toggle3 {
+        display: none;
+    }
+
+    .theme-toggle {
+        background-color: $darkBeige;
+    }
+
+    .toggle-button {
+        background-color: $orange;
+
+        &:active,
+        &:hover {
+            background-color: $orangeActive;
+        }
+    }
+
+    .display {
+        background-color: $display2Color;
+        color: $black;
+    }
+
+    .calculator {
+        background-color: $darkBeige;
+
+        .button {
+            background-color: $lightBeige;
+            color: $black;
+            box-shadow: inset 0px -4px 0px $button2ColorShadow !important;
+
+            &:active,
+            &:hover {
+                background: $white;
+            }
+        }
+
+        .button-del {
+            background-color: $darkGreen;
+            color: $white;
+            box-shadow: inset 0px -4px 0px $darkGreenShadow !important;
+
+            &:active,
+            &:hover {
+                background-color: $darkGreenActive;
+            }
+        }
+
+        .button-reset {
+            background-color: $darkGreen;
+            color: $white;
+            box-shadow: inset 0px -4px 0px $darkGreenShadow !important;
+
+            &:active,
+            &:hover {
+                background-color: $darkGreenActive;
+            }
+        }
+
+        .button-equal {
+            background-color: $orange;
+            color: $white;
+            box-shadow: inset 0px -4px 0px $orangeShadow !important;
+
+            &:active,
+            &:hover {
+                background-color: $orangeActive;
+            }
+        }
+    }
+}
+
+.theme-dark {
+    background-color: $backgroundColorTheme3;
+
+    .calc {
+        color: $yellow !important;
+    }
+
+    .theme-numbers {
+        color: $yellow;
+    }
+
+    .theme-text {
+        color: $yellow;
+    }
+
+    #toggle3 {
+        display: block !important;
+    }
+
+    #toggle1,
+    #toggle2 {
+        display: none;
+    }
+
+    .theme-toggle {
+        background-color: $darkPurple;
+
+        .toggle-button {
+            background-color: $mintColor;
+
+            &:active,
+            &:hover {
+                background-color: $mintColorActive;
+            }
+        }
+    }
+
+    .display {
+        background-color: $darkPurple;
+        color: $yellow;
+    }
+
+    .calculator {
+        background-color: $darkPurple;
+
+        .button {
+            background-color: $purple;
+            color: $yellow;
+            box-shadow: inset 0px -4px 0px $purpleShadow !important;
+
+            &:active,
+            &:hover {
+                background-color: $purpleActive;
+            }
+        }
+
+        .button-del {
+            background-color: $lightPurple;
+            color: $white !important;
+            box-shadow: inset 0px -4px 0px $lightPurpleShadow !important;
+
+            &:active,
+            &:hover {
+                background-color: $lightPurpleActive;
+            }
+        }
+
+        .button-reset {
+            background-color: $lightPurple;
+            color: $white;
+            box-shadow: inset 0px -4px 0px $lightPurpleShadow !important;
+
+            &:active,
+            &:hover {
+                background-color: $lightPurpleActive;
+            }
+        }
+
+        .button-equal {
+            background-color: $mintColor;
+            box-shadow: inset 0px -4px 0px $mintColorShadow !important;
+            color: $darkColor;
+
+            &:active,
+            &:hover {
+                background-color: $mintColorActive;
+            }
+        }
+    }
+}
