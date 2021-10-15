@@ -42,13 +42,13 @@ function changeTheme(e) {
         bodyEl.classList.add('theme-light');
         bodyEl.classList.remove('theme-blue');
         bodyEl.classList.remove('theme-dark');
-        localStorage.setItem("themeName", 'theme-light');
+        localStorage.setItem('themeName', 'theme-light');
     }
     else {
         bodyEl.classList.add('theme-dark');
         bodyEl.classList.remove('theme-blue');
         bodyEl.classList.remove('theme-light');
-        localStorage.setItem("themeName", 'theme-dark');
+        localStorage.setItem('themeName', 'theme-dark');
     }
 }
 
